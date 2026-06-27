@@ -2,7 +2,7 @@ const express=require("express");
 const productRouter=express.Router();
 const Products=require("../models/products");
 const userAuth=require("../middlewares/auth");
-const validateEditDate=require("../validations/utils");    
+const validateEditData=require("../validations/utils");    
 
 productRouter.get("/",userAuth,async (req,res)=>{
     try{
@@ -17,7 +17,7 @@ productRouter.get("/",userAuth,async (req,res)=>{
 })
 
 
-productRouter.post("/",userAuth,async (req,res)=>{
+productRouter.post("/addproduct",userAuth,async (req,res)=>{
 try{
     const {name,description,price,image}=req.body;
 
@@ -42,7 +42,21 @@ catch(err){
 }
 })
 
-productRouter.put("/:id",userAuth, async (req,res)=>{
+productRouter.get("/editproduct/:id",userAuth,async(req,res)=>{
+    try{
+        const product=await Products.findById(req.params.id);
+        if(!product){
+            throw new Error("product not found");
+        }
+        res.json(product);
+    }
+    catch(err){
+        res.status(400).send(err.message);
+    }
+    
+})
+
+productRouter.put("/editproduct/:id",userAuth, async (req,res)=>{
 
     try{
         const {id}=req.params;
@@ -58,7 +72,7 @@ productRouter.put("/:id",userAuth, async (req,res)=>{
             product[k]=req.body[k];
         })
         await product.save();
-        res.json({product});
+        res.json(product);
 
     }
     catch(err){

@@ -1,0 +1,24 @@
+.navbar{
+    background-color: cadetblue;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:20px;
+    margin:-8px;
+    height:100px;
+    font-family: verdana;
+    
+}
+.nav-pages{
+    display: flex;
+    gap:50px;
+    padding-right:20px;
+
+}
+.navbar a{
+    text-decoration: none;
+    /* text-decoration: underline; */
+}
+.loginBtn{
+    color:rgb(87, 35, 151)
+}

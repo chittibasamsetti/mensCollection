@@ -8,12 +8,13 @@ const userAuth=async(req,res,next)=>{
             throw new Error("Token not found");
         }
 
-        const decordedMessage=jwt.verify(token,"secret");
-        const user=await User.findById(decordedMessage);
+        const decodedMessage=jwt.verify(token,"secret");
+        const user=await User.findById(decodedMessage._id);
         req.user=user;
         next();
     }
     catch(err){
+        console.log(err);
         res.status(400).send(err.message);
     }
 }

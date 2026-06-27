@@ -6,7 +6,7 @@ const jwt=require("jsonwebtoken");
 const validator=require("validator");
 
 
-authRouter.post("/auth/signup",async(req,res)=>{
+authRouter.post("/signup",async(req,res)=>{
         try{
     const {firstName,lastName,email,password}=req.body;
 
@@ -42,7 +42,7 @@ catch(err){
 
 
 
-authRouter.post("/auth/login",async(req,res)=>{
+authRouter.post("/login",async(req,res)=>{
 
 try{
     const {email,password}=req.body;
@@ -75,7 +75,7 @@ catch(err){
 })
 
 
-authRouter.post("/auth/logout",(req,res)=>{
+authRouter.post("/logout",(req,res)=>{
     // res.cookie("token",null,{expires:new Date(Date.now())});
     res.clearCookie("token");
     res.send("user logged out successfully");

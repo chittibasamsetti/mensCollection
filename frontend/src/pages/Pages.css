@@ -1,0 +1,252 @@
+.signup-input{
+    /* display:flex; */
+    height:500px;
+    width:500px;
+    /* border:1px solid black; */
+    margin:auto;
+    margin-top:50px;
+    box-shadow: 10px black;
+    background-color: rgb(234, 231, 231);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.signup-input h1{
+    align-items: center;
+    margin-left:200px;
+}
+.signup-input input{
+    height:50px;
+    width:400px;
+    /* background-color: aquamarine; */
+    border:none;
+    border-radius: 10px;
+    margin-top: 25px;
+    font-family: verdana;
+    margin-left: 50px;
+}
+.signup-input button{
+    height:50px;
+    width:200px;
+    border-radius: 10px;
+    margin-left:150px;
+    margin-top: 40px;
+    border:none;
+    color:beige;
+    background-color: rgb(201, 60, 9);
+    font-family: verdana;
+}
+/* .user-input button:hover{
+    background-color: brown;
+} */
+.signup-input button:active{
+    background-color: orangered;
+    box-shadow: 2px 2px 2px rgb(191, 186, 186);
+    transition: 0.3s;
+    /* color:white; */
+}
+
+.login-input{
+     /* display:flex; */
+    height:500px;
+    width:500px;
+    /* border:1px solid black; */
+    margin:auto;
+    margin-top:50px;
+    box-shadow: 10px black;
+    background-color: rgb(234, 231, 231);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.login-input input{
+     height:50px;
+    width:400px;
+    /* background-color: aquamarine; */
+    border:none;
+    border-radius: 10px;
+    margin-top: 30px;
+    font-family: verdana;
+    margin-left: 50px;
+}
+
+.btn{
+    height:50px;
+    width:300px;
+    border-radius: 10px;
+    margin-left:95px;
+    margin-top: 40px;
+    border:none;
+    color:beige;
+    background-color: rgb(26, 147, 26);
+    font-family: verdana;
+}
+
+.btn:active{
+    background-color: green;
+    box-shadow: 2px 2px 2px rgb(191, 186, 186);
+    transition: 0.3s;
+    /* color:white; */
+}
+.login-input p{
+    text-align: center;
+    margin-top: 50px;
+}
+.btnn{
+    height:50px;
+    width:300px;
+    border-radius: 10px;
+    margin-left:100px;
+    margin-top: -10px;
+    border:none;
+    color:beige;
+    background-color: rgb(192, 98, 112);
+    font-family: verdana;
+}
+
+.btnn:active{
+    background-color: rgb(185, 72, 91);
+    box-shadow: 2px 2px 2px rgb(191, 186, 186);
+    /* transition: 0.3s; */
+    /* color:white; */
+}
+.signup-input h1{
+    font-family: verdana;
+    margin-top:10px;
+    margin-left:160px;
+    padding-top:17px;
+}
+
+.addproduct-input{
+    /* display:flex; */
+    height:500px;
+    width:500px;
+    /* border:1px solid black; */
+    margin:auto;
+    margin-top:50px;
+    box-shadow: 10px black;
+    background-color: rgb(234, 231, 231);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+.addproduct-input input{
+    height:50px;
+    width:400px;
+    /* background-color: aquamarine; */
+    border:none;
+    border-radius: 10px;
+    margin-top: 25px;
+    font-family: verdana;
+    margin-left: 50px;
+}
+
+
+.login-input h1{
+    font-family: verdana;
+    margin-top:10px;
+    margin-left:175px;
+    padding-top:20px;
+    
+}
+.addproduct-input h1{
+    font-family: verdana;
+    margin-top:10px;
+    margin-left:145px;
+    padding-top:20px;
+    
+}
+.addproduct-input button{
+    height:50px;
+    width:200px;
+    border-radius: 10px;
+    margin-left:150px;
+    margin-top: 40px;
+    border:none;
+    color:beige;
+    background-color: rgb(56, 27, 185);
+    font-family: verdana;
+}
+/* .user-input button:hover{
+    background-color: brown;
+} */
+.addproduct-input button:active{
+    background-color: rgb(35, 3, 139);
+    box-shadow: 2px 2px 2px rgb(191, 186, 186);
+    transition: 0.3s;
+    /* color:white; */
+}
+.error{
+    color:red;
+    font-family: verdana;
+    /* margin-left:180px; */
+    text-align: center;
+    margin-bottom: -10px;
+}
+.success{
+    color:green;
+    text-align:center;
+    font-family: verdana;
+    font-size:18px;
+    margin-bottom:-10px;
+}
+
+.product-card{
+    border:dotted 1px black;
+    height:auto;
+    width:270px;
+    margin-bottom:20px;
+    font-family: verdana;
+    font-size: 12px;
+    box-shadow: 0px 2px 5px black;
+    border-radius: 10px;
+    /* background-color: rgb(171, 171, 58); */
+}
+.products{
+    display:grid;
+    grid-template-columns:auto auto auto auto;
+    justify-content:space-evenly;
+    margin-top: 30px;
+}
+.product-card img{
+    height:250px;
+    width:200px;
+    /* border:1px solid red; */
+    /* align-items: center; */
+    margin-left:32px;
+    margin-top: 10px;
+    border-radius: 10px;
+   box-shadow: 0px 2px 5px black;
+    
+}
+.edit-delete{
+    display:flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    
+
+}
+.edit-delete button{
+    border:none;
+    width:100px;
+    height:30px;
+    border-radius: 8px;
+}
+.edit-btn:active{
+box-shadow: 1px 1px 5px black;
+}
+.delete-btn:active{
+box-shadow: 1px 1px 5px black;
+}
+.product-price{
+    color:green;
+    margin-left:20px;
+}
+.product-name{
+ margin-left:20px;
+ font-family: verdana;
+}
+.product-description{
+    margin-left:20px;
+ font-family: verdana;
+ font-size: 15px;
+}

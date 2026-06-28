@@ -24,7 +24,7 @@ function Login(){
     try{
         const response=await axios.post("http://localhost:3000/login",{email,password},{withCredentials:true});
         console.log(response.data);
-       navigate("/");
+       navigate("/home");
         
     }
     catch(err){

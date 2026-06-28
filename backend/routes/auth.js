@@ -4,6 +4,7 @@ const bcrypt=require("bcrypt");
 const User=require("../models/user")
 const jwt=require("jsonwebtoken");
 const validator=require("validator");
+const userAuth=require("../middlewares/auth");
 
 
 authRouter.post("/signup",async(req,res)=>{
@@ -74,6 +75,11 @@ catch(err){
 }
 })
 
+
+authRouter.get("/user",userAuth, async(req,res)=>{
+    const user=req.user;
+    res.send(user);
+})
 
 authRouter.post("/logout",(req,res)=>{
     // res.cookie("token",null,{expires:new Date(Date.now())});

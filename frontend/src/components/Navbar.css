@@ -22,3 +22,21 @@
 .loginBtn{
     color:rgb(87, 35, 151)
 }
+.welcome{
+    /* background-color: beige; */
+    width:300px;
+    display:flex;
+    margin:auto;
+    font-style:italic;
+    margin-left: 380px;
+    align-items: center;
+}
+
+.welcome-user{
+    color:green;
+    align-items: center;
+    font-family: verdana;
+    font-size: 20px;
+    margin:auto;
+    
+}

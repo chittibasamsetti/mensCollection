@@ -5,10 +5,11 @@ import validator from "validator";
 import axios from "axios";
 import "./Pages.css";
 
-function Login(){
+function Login({setIsUserLogged}){
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
     const [error,setError]=useState("");
+    // const [isUserLogged,setIsUserLogged]=useState(false);
     const navigate=useNavigate();
 
     const loginHandler=async ()=>{
@@ -23,6 +24,7 @@ function Login(){
     }
     try{
         const response=await axios.post("http://localhost:3000/login",{email,password},{withCredentials:true});
+        setIsUserLogged(true);
         console.log(response.data);
        navigate("/home");
         

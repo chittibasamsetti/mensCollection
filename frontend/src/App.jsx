@@ -34,9 +34,9 @@ function App(){
       <Navbar isUserLogged={isUserLogged} setIsUserLogged={setIsUserLogged}/>
       <Routes>
       
-        <Route path="/" element={isUserLogged ? <Home/> : <Login/>}></Route>
+        <Route path="/" element={isUserLogged ? <Home/> : <Login setIsUserLogged={setIsUserLogged}/>}></Route>
         <Route path="/signup" element={<SignUp/>}></Route>
-        <Route path="/login" element={<Login/>}></Route>
+        <Route path="/login" element={<Login setIsUserLogged={setIsUserLogged}/>}></Route>
         <Route path="/home" element={<Home/>}></Route>
         <Route path="/addProduct" element={<AddProduct/>}></Route>
         <Route path="/editProduct/:id" element={<EditProduct/>}></Route>

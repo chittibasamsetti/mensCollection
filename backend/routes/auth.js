@@ -78,7 +78,7 @@ catch(err){
 
 authRouter.get("/user",userAuth, async(req,res)=>{
     const user=req.user;
-    res.send(user);
+    res.json(user);
 })
 
 authRouter.post("/logout",(req,res)=>{
